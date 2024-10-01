@@ -3,12 +3,11 @@ package esercizio3;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Rubrica {
+public class Contatti{
     private String telefono;
     private String nome;
-    public Map<String, String> rubs = new HashMap<>();
 
-    public Rubrica(String nome, String telefono) {
+    public Contatti(String nome, String telefono) {
         this.nome = nome;
         this.telefono = telefono;
     }
@@ -29,9 +28,6 @@ public class Rubrica {
         this.nome = nome;
     }
 
-    public Map<String, String> getRubs() {
-        return rubs;
-    }
 
     @Override
     public String toString() {
@@ -40,15 +36,6 @@ public class Rubrica {
                 ", nome='" + nome + '\'' +
                 '}';
     }
-    public void nomeTel(Rubrica rub){
-        rubs.put(rub.getNome(), rub.getTelefono());
-    }
 
-    public void deleteNum(String name){
-        rubs.remove(name);
-    }
-    public void searchByName(String name){
-        System.out.println(rubs.get(name));
-    }
 
 }

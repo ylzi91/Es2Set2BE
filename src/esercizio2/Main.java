@@ -1,9 +1,6 @@
 package esercizio2;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,10 +13,11 @@ public class Main {
 
 
     public static ArrayList<Integer> orderList (int number){
-        Set<Integer> casualNumber = new TreeSet<>();
+        ArrayList<Integer> casualNumber = new ArrayList<>();
         for (int i = 0; i < number; i++) {
             casualNumber.add((int) (Math.floor(Math.random() * 100 )));
         }
+        Collections.sort(casualNumber);
         ArrayList<Integer> orderNumeber = new ArrayList<>(casualNumber);
         return orderNumeber;
     }
